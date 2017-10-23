@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="704.0" prefWidth="488.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="biodata.FXMLDocumentController">
+   <children>
+      <Label layoutX="150.0" layoutY="39.0" prefHeight="45.0" prefWidth="125.0" text="Formulir">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonproses" layoutX="80.0" layoutY="369.0" mnemonicParsing="false" onAction="#proses" text="Proses" />
+      <Button fx:id="buttonhapus" layoutX="196.0" layoutY="369.0" mnemonicParsing="false" onAction="#hapus" text="Hapus" />
+      <TextArea fx:id="hasil" layoutX="41.0" layoutY="445.0" prefHeight="198.0" prefWidth="309.0" />
+      <GridPane layoutX="48.0" layoutY="84.0" prefHeight="253.0" prefWidth="358.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="87.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="271.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="editnama" onAction="#eeditnama" GridPane.columnIndex="1" />
+            <TextField fx:id="editalamat" onAction="#eeditalamat" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="editabsen" onAction="#eeditabs" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="edittelepone" onAction="#eedittelp" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Nama" />
+            <Label text="Alamat" GridPane.rowIndex="1" />
+            <Label text="Absen" GridPane.rowIndex="2" />
+            <Label text="Telepon" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
